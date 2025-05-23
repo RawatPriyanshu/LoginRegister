@@ -2,37 +2,238 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* home page */
+.home{
+  background-color: #f7f8f9;
+  height: 100vh;
+  width: 100%;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.home-container{
+  z-index:  1;
+  height: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
   align-items: center;
+  margin: 0 20px 20px 20px;
+}
+.welcome-container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: 5px;
+  margin-bottom: 25px;
+}
+.welcome{
+  font-size: 1.4rem;
+  margin-bottom: 5px;
+}
+.welcome-message{
+  text-align: left;
+  width: 80%;
+  color: #a2a4a8;
+}
+.login-signup{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.create-account{
+  background-color: #6c25ff;
+  width: 100%;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  margin-bottom: 9px;
+  padding: 0.7rem 0;
+  border-radius: 5px;
+}
+.already-registered{
+  background-color: #cebafb;
+  width: 100%;
+  border: none;
+  font-weight: bold;
+  margin-bottom: 9px;
+  padding: 0.7rem 0;
+  border-radius: 5px;
+}
+
+/* register page */
+.register-page {
+  background-color: #f7f8f9;
+  height: 100vh;
+  width: 100%;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.registration{
+  margin: 35px 20px 20px 20px;
+}
+.registration h1{
+  font-size: 1.5rem;
+  width: 60%;
+  font-family: Inter, sans-serif;
+  text-align: left;
+}
+.registration-form{
+  width: 100%;
+  margin-top: 25px;
+}
+.registration-form span{
+  color: red;
+}
+.input-group{
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+.input-group input{
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+   box-sizing: border-box;
+}
+.input-group label{
+  position: absolute;
+  font-size: 0.7rem;
+  color: #a05cff;
+  z-index: 1;
+  font-weight: 500;
+  left: 10px;
+  top: -10px;
+  background-color: #fff;
+  padding: 2px 5px;
+}
+.agency-check{
+  text-align: left;
+}
+.agency-check p {
+  font-weight: 700;
+  font-size: 0.67rem;
+}
+.agency-check div{
+  margin-top: 4px;
+  display: flex;
+  align-items: center;
+}
+.agency-check label{
+  margin: 0px 1rem 0 0.8rem;
+  font-size: 0.75rem;
+}
+input[type="radio"] {
+  accent-color: #6c25ff;
+  width: 18px;          
+  height: 18px;
+}
+.registration-button{
+  background-color: #6c25ff;
+  width: 100%;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  margin-bottom: 9px;
+  padding: 0.7rem 0;
+  border-radius: 5px;
+  margin-top: 11rem;
 }
 
-.App-link {
-  color: #61dafb;
+/* Login page */
+.login-page{
+  background-color: #f7f8f9;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.signin{
+  margin: 35px 20px 20px 20px;
+}
+.signin h1{
+  font-size: 1.5rem;
+  width: 60%;
+  font-family: Inter, sans-serif;
+  text-align: left;
+  word-spacing: -2px;
+}
+.signin p{
+  text-align: left;
+  width: 80%;
+  color: #a2a4a8;
+  margin-top: 7px;
+  word-spacing: -3px;
+}
+.login-form{
+  margin-top: 20px;
+}
+.login-form input{
+  font-size: 0.8rem;
+  padding: 12px;
+}
+.login-btn{
+   background-color: #cbcbcb;
+  width: 100%;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  padding: 0.7rem 0;
+  border-radius: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* profile page */
+.profile-page{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.profile{
+  margin: 20px 20px;
+  text-align: left;
+  width: 100%;
+}
+.profile-picture{
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.profile-picture img{
+  width: 100%;
+}
+.user{
+  margin-top: 35px;
+}
+.user-wrap{
+  display: flex;
+}
+.username{
+  margin-left: 10px;
+  margin-top: 5px;
+}
+.username h5{
+  font-size: 0.75rem;
+}
+.username span{
+  font-size: 0.75rem;
+}
+.user p{
+  text-align: left;
+  color: #a2a4a8;
+  font-weight: 500;
+  line-height: 0.8;
+  font-size: 0.9rem;
+  margin-top: 20px;
 }
